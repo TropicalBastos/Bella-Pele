@@ -1,0 +1,30 @@
+<% include ../dist/public/partials/header.html %>
+<div class="content">
+    <div class="back">
+    <div class="title-wrapper">
+    <h1 id="title-header">Bella Pele</h1>
+    <div class="logo"></div>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="banner-wrapper">
+    <h1 class="header">Fotos</h1>
+    </div>
+    </div>
+  <div class="main-content" ng-init="photos = <%=photos%>">
+
+    <div class="foto-title slide-in">
+      <h1>Fotos do nosso lugar</h1>
+    </div>
+
+    <div class="gallery-wrapper">
+    <div class="photo-gallery" ng-repeat="p in photos">
+      <a href="res/{{p}}"><img src="res/{{p}}" alt="foto"></a>
+    </div>
+  </div>
+  </div>
+  <div class="footer" ng-include="'partials/footer.html'">
+  </div>
+  </div>
+</body>
+</html>

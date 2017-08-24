@@ -1,0 +1,30 @@
+{
+  "name": "bellapele",
+  "version": "1.0.0",
+  "description": "privateclinicbusiness",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "nodemailer": "^3.1.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-if": "^2.0.2",
+    "gulp-shell": "^0.6.3",
+    "gulp-uglify": "^2.1.2",
+    "gulp-useref": "^3.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "dermatology"
+  ],
+  "author": "ianbastos",
+  "license": "ISC"
+}

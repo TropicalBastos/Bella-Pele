@@ -1,0 +1,38 @@
+<% include ../dist/public/partials/header.html %>
+<script>
+  contextTitle = "<%=advice.title%>";
+  contextImage = "<%=advice.imagedir%>";
+  contextPath = "<%=advice.htmlpath%>";
+</script>
+  <div class="content">
+    <div class="back">
+    <div class="title-wrapper">
+    <h1 id="title-header">Bella Pele</h1>
+    <div class="logo"></div>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="banner-wrapper">
+    <h1 class="header">Dica</h1>
+    </div>
+    </div>
+  <div class="main-content" ng-controller="adviceCtrl">
+
+    <div class="advice-title-wrapper">
+      <h1>{{title}}</h1>
+    </div>
+
+    <div class="main-image-wrapper">
+      <img ng-src="{{imagePath}}" alt="imagem"/>
+    </div>
+
+    <div class="text">
+      <ng-include src="path"></ng-include>
+    </div>
+
+  </div>
+  <div class="footer" ng-include="'../partials/footer.html'">
+  </div>
+</body>
+
+</html>

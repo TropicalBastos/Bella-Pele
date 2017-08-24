@@ -1,0 +1,49 @@
+<% include ../dist/public/partials/header.html %>
+  <div class="content">
+    <div class="back">
+    <div class="title-wrapper">
+    <h1 id="title-header">Bella Pele</h1>
+    <div class="logo"></div>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="banner-wrapper">
+    <h1 class="header">Contato</h1>
+    </div>
+    </div>
+  <div class="main-content">
+
+
+      <div class="contact-wrapper">
+
+        <div class="details">
+          <p>Fone: (75) 3221-0552 / 3614-0014 administracao@clinicabellapele.com.br</p>
+        </div>
+
+        <h1>Nome</h1>
+        <input id="name" type="text">
+        <p class="validation validation-name">*Digite um nome por favor</p>
+        <h1>Email</h1>
+        <input id="email" type="text">
+        <p class="validation validation-email">*Digite um email correto</p>
+        <h1>Mensagem</h1>
+        <textarea id="message"></textarea>
+        <p class="validation validation-message">*Nenhuma mensagem digitada</p>
+        <button id="send-button" class="primary-button">Enviar</button>
+      </div>
+
+      <div class="loading-icon"></div>
+
+      <div class="send">
+        <h1></h1>
+        <p></p>
+        <button class="error-ok primary-button">OK</button>
+      </div>
+
+  </div>
+  <div class="footer" ng-include="'partials/footer.html'">
+  </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+[
+  {
+  "title":"10 dicas para uma pele perfeita",
+  "imagedir":"../res/advice1.jpg",
+  "htmlpath":"../advices/0.html"
+  },
+  {
+    "title":"Cuidados com a pele da criança",
+    "imagedir":"../res/advice2.jpg",
+    "htmlpath":"../advices/1.html"
+  }
+]

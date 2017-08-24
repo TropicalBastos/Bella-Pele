@@ -1,0 +1,133 @@
+<% include ../dist/public/partials/header.html %>
+  <div class="content">
+    <div class="back">
+    <div class="title-wrapper">
+    <h1 id="title-header">Bella Pele</h1>
+    <div class="logo"></div>
+    <span><h1 id="bemvindo">{{welcomeMessage}}</h1></span>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="banner-wrapper">
+    <h1 class="header">Home</h1>
+    </div>
+    </div>
+
+    <div class="mini-nav">
+      <div class="mini-wrapper">
+      <button class="equipe-nav primary-button">Equipe</button>
+      <button class="dicas-nav primary-button">Dicas</button>
+      <button class="esp-nav primary-button">Especialidades</button>
+    </div>
+    </div>
+
+    <div id="nav-icon2">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-icon-menu">
+      <div class="nav-icon-menu-item equipe-nav"><h1>Equipe</h1></div>
+      <div class="nav-icon-menu-item dicas-nav"><h1>Dicas</h1></div>
+      <div class="nav-icon-menu-item esp-nav"><h1>Especialidades</h1></div>
+    </div>
+
+  <div class="main-content">
+
+  <div class="clearfix"></div>
+
+    <div class="right-column">
+      <div class="aboutWrapper">
+        <h1>Sobre a Clínica</h1>
+        <p>A clínica Bella Pele tem como objetivo prestar atendimento de qualidade em diversas áreas,
+          tais como dermatologia clínica, cirúrgica, cosmiátrica e estética, promovendo saúde e beleza
+          à pele. Atualmente, conta com mais uma especialidade para cuidar ainda mais de você...
+          Por isso, a Clínica informa que já tem um profissional na área de Cirurgia Plástica -  Dr. Ricardo da Silva Izola, atendendo suas necessidades
+          causando mais motivação e bem-estar.</p>
+          <br>
+          <a href="fotos"><button class="fotos-button">Fotos</button></a>
+      </div>
+    </div>
+    <div class="reviews">
+      <h1>Crítica</h1>
+      <ul>
+        <li ng-repeat="x in reviews.data track by $index">
+          <i class="fa fa-quote-left"></i><span>{{x.review}}<i class="fa fa-quote-right"></i> &nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+          <p> &nbsp; - {{x.name}} </p>
+          <br>
+          <br>
+        </li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+    <div class="team">
+      <div class="team-wrapper" ng-include="currentMenu">
+    </div>
+    </div>
+    <div class="advice-wrapper" ng-init="advices = <%=advices%>">
+      <h1>Dicas</h1>
+      <a href="/dica/{{a.title}}" ng-repeat="a in advices"><div class="advice">
+        <h2>{{a.title}}</h2>
+        <p>Clique para ler mais</p>
+      </div></a>
+    </div>
+    <div class="clearfix"></div>
+    <div class="clinica-container">
+    <div class="control-wrapper">
+    <div class="arrow-left"><i class="fa fa-arrow-left"></i></div>
+    <div class="arrow-right"><i class="fa fa-arrow-right"></i></div>
+    <div class="index-circle circle1 active"></div>
+    <div class="index-circle circle2"></div>
+    <div class="index-circle circle3"></div>
+    <div class="index-circle circle4"></div>
+    <h1>Clínica</h1>
+    </div>
+    <div id="slides">
+      <div class="slide-effect"><img src="res/3.jpg"/></div>
+      <div class="slide-effect"><img src="res/2.jpg"/></div>
+      <div class="slide-effect"><img src="res/1.jpg"/></div>
+      <div class="slide-effect"><img src="res/4.jpg"/></div>
+    </div>
+
+    <div>
+      <a href="/fotos">
+        <button class="underline primary-button">Veja nossas fotos</button>
+      </a>
+      </div>
+
+    </div>
+
+    <!-- especialidades hidden info -->
+    <div class="esp">
+      <div class="esp-title-wrapper">
+      <h1 class="esp-title">Especialidades</h1>
+    </div>
+      <h1>Dermatologia Clínica:</h1>
+      <p>Avaliação de  lesões na pele, suspeita de câncer, queda de cabelo, tratamento para vitiligo, psoríase e alergias.</p>
+      <h1>Dermatologia  Cirúrgica:</h1>
+      <p>Retirada de sinais e verrugas, tratamento e quelóides.</p>
+      <h1>Dermatologia Estética:</h1>
+      <p>Utilizando técnicas para melhora no envelhecimento da pele.
+    Peelings químicos – Tratamento para rugas e manchas;
+    Peelings de cristal e diamante – tratamento de poros abertos, rugas superficiais, cicatrizes e estrias;
+    Toxina Botulínica (BOTOX) – Tratamento para rugas;
+    Preenchimento – tratamento sulco naso- labial (bigode chinês), aumento de volume dos lábios.
+    Carboxiterapia – infusão de CO2 na pele, promovendo melhora para celulite, estrias, gorduras localizadas e flacidez.
+    Depilação a laser;
+    Rejuvenescimento a laser;
+    Tratamento de manchas a laser.</p>
+    <div class="filler"></div>
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
+  <div class="footer" ng-include="'partials/footer.html'">
+  </div>
+  </div>
+</body>
+
+</html>
